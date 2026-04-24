@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de Filmes</title>
+
+    <!-- Importando CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Importando Font Awasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--  Importando Scripts-->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <!-- Sessão principal - INÍCIO DA PÁGINA -->
+        <div id="section-main-container"">
+            <section id="section-main">
+                <span id="edition">
+                    - EST. 2026 - VOL. I -
+                </span>
+                <h1 id="section-main-title">Ciné<span>ma</span></h1>
+                <p id="section-main-description">
+                    Um mural íntimo para os filmes e séries que moldam quem você é. Registre, revise, relembre.
+                </p>
+
+                <button id="btn-abrir-acervo">
+                    <span>Abrir acervo</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div id="section-main-end">
+                    <div>
+                        <p>Role para descobrir</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sessão de acervos - LISTAGEM E GERENCIAMENTO DE FILMES -->
+        <section id="section-acervo-container">
+            <div id="section-acervo">
+                <div id="section-acervo-header">
+                    <h2 class="section-acervo-title">O <span>acervo</span></h2>
+
+                    <p id="qnt-registrados"><strong>X</strong> Filmes registrados</p>
+                </div>
+
+                <!-- Barra de filtragem, com barra de pesquisa, filtros por status do filme (assistido, assistindo, quero ver e todos) e botão para adicionar um novo filme ao acervo -->
+                <div id="filter-bar">
+                    <div id="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" name="search" id="search" placeholder="Buscar por título...">
+                    </div>
+
+                    <div id="filters">
+                        <button id="filter-todos" class="filter-selected">Todos</button>
+                        <button id="filter-assistidos">Assistidos</button>
+                        <button id="filter-assistindo">Assistindo</button>
+                        <button id="filter-quero-ver">Quero ver</button>
+                    </div>
+
+                    <button id="add-movie">
+                        <i class="fa-solid fa-plus"></i>
+                        Adicionar Filme
+                    </button>
+                </div>
+
+                <div id="movies-container">
+                    <div id="movies-list">
+                        <!-- Exemplo de card de filme -->
+                        <div class="movie-card">
+                            <div class="movie-img">
+                                <span class="movie-status">Assistido</span>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-title">
+                                    Interestelar
+                                </p>
+                                <div class="genre-and-available">
+                                    <span class="genre">Aventura</span>
+                                    <div class="available">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-img">
+                                <span class="movie-status">Assistido</span>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-title">
+                                    Título do filme
+                                </p>
+                                <div class="genre-and-available">
+                                    <span class="genre">Aventura</span>
+                                    <div class="available">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-img">
+                                <span class="movie-status">Assistido</span>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-title">
+                                    Título do filme
+                                </p>
+                                <div class="genre-and-available">
+                                    <span class="genre">Aventura</span>
+                                    <div class="available">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-card">
+                            <div class="movie-img">
+                                <span class="movie-status">Assistido</span>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-title">
+                                    Título do filme
+                                </p>
+                                <div class="genre-and-available">
+                                    <span class="genre">Aventura</span>
+                                    <div class="available">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <span>Ciné</span>ma - PROJETO ACADÊMICO + HTML + CSS + JAVASCRIPT
+        </p>
+    </footer>
+</body>
+
+</html>

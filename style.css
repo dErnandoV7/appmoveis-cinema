@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+/* font-family: "Bodoni Moda", serif; */
+/* font-family: "DM Mono", monospace; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+}
+
+button {
+    border: none;
+}
+
+:root {
+    --bg: #0a0908;
+    --bg-2: #141210;
+    --ink: #f4ede4;
+    --ink-dim: #a59d91;
+    --accent: #d4a84b;
+    --accent-2: #8b1e1e;
+    --red: #c73e3e;
+    --green: #5a7a4a;
+    --blue: #4a6a8a;
+    --border: rgba(244, 237, 228, 0.12);
+    --glow: rgba(212, 168, 75, 0.35);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-2);
+    color: var(--ink);
+}
+
+/* Sessão principal - INÍCIO DA PÁGINA */
+#section-main-container {
+    background: #0a0a0a url(images/cinema-background.jpg) center/cover no-repeat fixed;
+}
+
+#section-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    min-height: 100vh;
+    /* background: var(--bg); */
+    margin: auto;
+}
+
+#edition {
+    color: var(--accent);
+    font-size: 12px;
+    margin-bottom: 32px;
+    letter-spacing: 6px;
+}
+
+#section-main-title,
+#section-main-title span {
+    font-family: "Bodoni Moda", serif;
+    font-size: 192px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--ink);
+    line-height: 200px;
+    margin-bottom: 16px;
+}
+
+#section-main-title span {
+    font-style: italic;
+    color: var(--accent);
+}
+
+#section-main-description {
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+    color: var(--ink-dim);
+    letter-spacing: 1px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 48px;
+    width: 80%;
+}
+
+#btn-abrir-acervo {
+    padding: 20px 44px;
+    border: 1px var(--accent) solid;
+    font-size: 14px;
+    color: var(--accent);
+    text-transform: uppercase;
+    background: transparent;
+    letter-spacing: 1px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+#btn-abrir-acervo span,
+#btn-abrir-acervo i {
+    position: relative;
+    z-index: 1;
+}
+
+#btn-abrir-acervo::before {
+    content: "";
+    position: absolute;
+    background: var(--accent);
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+    transition: .3s;
+    z-index: 0;
+}
+
+#btn-abrir-acervo:hover::before {
+    bottom: 0;
+}
+
+#btn-abrir-acervo:hover {
+    color: var(--bg-2);
+}
+
+#section-main-end {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+}
+
+#section-main-end>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    position: relative
+}
+
+#section-main-end>div p {
+    letter-spacing: 1px;
+    color: var(--ink-dim);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#section-main-end>div::after {
+    content: "";
+    position: absolute;
+    top: 200%;
+    width: 1px;
+    height: 20px;
+    background: var(--ink-dim);
+    opacity: 50%;
+    animation: scale 1s infinite linear alternate
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2.3);
+        opacity: 80%;
+    }
+}
+
+/* Sessão de acervos - LISTAGEM E GERENCIAMENTO DE FILMES */
+#section-acervo-container {
+    background: var(--bg);
+    border-bottom: 1px var(--border) solid;
+    padding-bottom: 30px
+}
+
+#section-acervo {
+    padding: 80px 0;
+    width: 95%;
+    max-width: 1600px;
+    margin: auto
+}
+
+#section-acervo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+    flex-wrap: wrap
+}
+
+#section-acervo-header h2,
+#section-acervo-header span {
+    font-size: 64px;
+    font-family: "Bodoni Moda", serif;
+    color: var(--ink-dim);
+}
+
+#section-acervo-header span {
+    font-style: italic;
+    color: var(--accent);
+}
+
+#section-acervo-header p {
+    color: var(--ink-dim);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#section-acervo-header p strong {
+    color: var(--accent);
+}
+
+#filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 48px
+}
+
+#search-bar {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    background: var(--bg-2);
+    padding: 20px 30px;
+    border: 1px solid var(--border);
+    transition: .3s
+}
+
+#search-bar i {
+    rotate: 90deg;
+    color: var(--ink-dim);
+    font-size: 10px;
+}
+
+#search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    letter-spacing: 1px;
+    flex: 1;
+}
+
+#search-bar:focus-within {
+    border: 1px var(--accent) solid
+}
+
+#filters {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap
+}
+
+#filters button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ink-dim);
+    background: var(--bg-2);
+    padding: 18px 26px;
+    font-size: 12px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: .3s
+}
+
+#filters .filter-selected {
+    color: var(--bg);
+    background: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+#filters button:hover:not(.filter-selected) {
+    border: 1px solid var(--ink)
+}
+
+#add-movie {
+    padding: 20px 30px;
+    text-align: center;
+    color: var(--bg);
+    background: var(--accent);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#movies-list {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-img {
+    background: #000 url(images/interestelar.jpg) no-repeat center center;
+    background-size: cover;
+    width: 230px;
+    aspect-ratio: 2/3;
+    padding: 14px;
+    margin-bottom: 16px
+}
+
+.movie-img .movie-status {
+    padding: 6px 10px;
+    background: var(--bg-2);
+    font-size: 11px;
+    letter-spacing: .6px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: 600
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-info .movie-title {
+    font-size: 18.5px;
+    font-family: "Bodoni Moda", serif;
+    color: var(--ink);
+}
+
+.genre-and-available {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.available {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-size: 8px;
+    color: var(--accent);
+}
+
+footer {
+    padding: 50px 10px;
+    margin: auto;
+    background: var(--bg);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--ink-dim);
+    text-align: center;
+}
+
+footer p span {
+    color: var(--accent);
+    font-family: "Bodoni Moda", serif;
+    font-style: italic
+}
+
+/* Responsividade */
+
+@media (max-width: 1100px) {
+    #filter-bar {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #search-bar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+
+    #section-main-title,
+    #section-main-title span {
+        font-size: 120px;
+        line-height: 120px;
+    }
+
+    #section-main-description {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 530px) {
+
+    #section-main {
+        width: 100%;
+    }
+
+    #section-main-title,
+    #section-main-title span {
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    #edition {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    #section-main-description {
+        font-size: 12px;
+        width: 80%;
+    }
+
+
+    #section-acervo-container {
+        padding: 10px
+    }
+
+    #movies-list {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .movie-card {
+        width: 100%;
+        padding-bottom: 10px
+    }
+
+    .movie-card:not(:last-child) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .movie-img {
+        width: 100%
+    }
+}
