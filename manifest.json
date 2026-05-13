@@ -1,0 +1,10 @@
+{
+    "name": "Cinéma - Mural de Filmes",
+    "short_name": "Cinéma",
+    "description": "Mural íntimo para registrar, revisar e relembrar filmes e séries",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0908",
+    "theme_color": "#d4a84b",
+    "orientation": "portrait-primary"
+}
